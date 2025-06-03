@@ -1,0 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+app-footer {
+  flex-shrink: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  margin-top: 10%;
+}

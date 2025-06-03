@@ -1,0 +1,75 @@
+.search-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #ff0000 100%);
+    padding-top: 2rem; 
+}
+
+.search-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 10%;
+}
+
+.search-input {
+    padding-right: 2.5rem; 
+}
+
+.custom-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    background-color: #d10000;
+    color: #fff;
+    outline: none;
+}
+
+/* Style pour la zone des paroles */
+.lyrics-container pre {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1.1em;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: 0;
+}
+
+/* Style pour le bouton Copier */
+.btn-outline-secondary.btn-sm.mt-2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+.btn-outline-secondary.btn-sm.mt-2:hover {
+  background: #e2e6ea;
+}
+
+/* Style pour la traduction */
+.alert-info pre {
+  background: #e7f3fe;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1em;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

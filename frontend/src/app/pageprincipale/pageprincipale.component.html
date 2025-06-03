@@ -1,0 +1,39 @@
+<div class="search-wrapper">
+  <div class="search-container">
+    <h4 class="mb-4 text-center">🎵 Paste your song link here (youtubeUrl) 🎵</h4>
+    <div class="position-relative mb-4">
+      <input 
+        type="text" 
+        class="form-control search-input" 
+        placeholder="Collez un lien YouTube ici..."
+        [(ngModel)]="youtubeUrl"
+        (keyup.enter)="fetchLyrics()">
+      <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"></i>
+    </div>
+    <button 
+      class="custom-btn" 
+      (click)="fetchLyrics()"
+      [disabled]="isLoading">
+      {{ isLoading ? 'Processing...' : 'Extract Lyrics' }}
+    </button>
+
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="songInfo" class="mt-4">
+      <div class="card">
+        <img [src]="songInfo.thumbnail" class="card-img-top" *ngIf="songInfo.thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">{{ songInfo.title }}</h5>
+          <p class="card-text">{{ songInfo.artist }}</p>
+        </div>
+      </div>
+      
+      <div class="lyrics-container mt-3">
+        <pre>{{ lyrics }}</pre>
+        <button class="btn btn-outline-secondary btn-sm mt-2" (click)="copyLyrics()">Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
