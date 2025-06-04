@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/lyric-snap/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
