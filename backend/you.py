@@ -15,8 +15,9 @@ app = FastAPI(title="lycrissnap API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:4200"],
-    allow_methods=["GET", "POST"],
+    allow_origins=["*"],  # Permet tous les domaines pour le développement
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
