@@ -16,7 +16,7 @@ interface LyricsResponse {
   providedIn: 'root'
 })
 export class LyricsService {
-  private apiUrl = 'http://localhost:8000/api/extract';
+  private apiUrl = 'https://lyrics-s7ko.onrender.com/api/extract';
 
   constructor(private http: HttpClient) { }
 
